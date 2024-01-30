@@ -1,0 +1,141 @@
+.card {
+    width: 650px;
+    height: 650px;
+    top: 10px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+
+
+
+.footer {
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    bottom: -300px;
+    left: 0;
+}
+
+.footer__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.footer__item {
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.footer__link {
+    font-size: 16px;
+    color: #eee;
+    text-decoration: none;
+}
+
+.footer__logo {
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.footer__copyright {
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer__copyright .footer__link {
+    font-size: 1.4rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.brand-logo {
+    height: 80px;
+    width: auto;
+    text-align: center;
+}
+
+
+
+.form-control {
+    height: 30px;
+    border-color: #ffffff;
+    border-radius: 0;
+}
+
+
+.input-group {
+    width: 400px;
+}
+
+.btn1 {
+    min-height: 10px;
+    border-radius: 0;
+    background: #243c4f;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+
+nav {
+    position: absolute;
+    min-height: 2%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: black !important;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.navbar-brand {
+    margin-left: 70px;
+    font-size: 30px;
+}
+
+.nav-items {
+    right: 100px;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+    font-size: 17px;
+}
+
+.user {
+    border-bottom: none;
+}
+
+.nav-item:hover {
+    background: orange;
+}
+
+.nav-link {
+    padding: 1em !important;
+}
+
+a {
+    cursor: pointer;
+    color: #ffffff;
+}

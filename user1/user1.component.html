@@ -1,0 +1,93 @@
+<div class="header">
+    <nav
+      class="nav navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+      <a class="navbar-brand" routerLink="home"
+        ><b style="color:#ffffff">WELCOME</b></a
+      >
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-items">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/register" style="color:#ffffff" box-sizing="border-box"><b>Sign Up</b></a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+  </div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header" style="background-color:lightslategray;">
+                    <h4 class="text-center" >OTP Verification</h4>
+
+                </div>
+                <div class="card-body">
+                    <form class="otp-form">
+                        <!-- (ngSubmit)="registerUser()" -->
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="text" id="phoneNumber" [(ngModel)]="phoneNumber" name="phoneNumber"
+                                class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"
+                                (click)="registerUser()">Register</button>
+
+                        </div>
+
+                        <p class="msg" *ngIf="message">OTP sent succesfully!</p>
+
+                        <div class="form-group">
+
+                            <!-- (ngSubmit)="verifyOtp()" -->
+
+                            <label for="otp">Enter OTP:</label>
+                            <input type="text" id="otp" [(ngModel)]="otp" name="otp" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block" (click)="verifyOtp()">Verify
+                                OTP</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="row justify-content-end">
+    <div class="col-6">
+    <ul class="footer__nav">
+      <li class="footer__item">
+        <a class="footer__link" routerLink="/home">Home</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" routerLink="/about">About</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Privacy Policy</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" routerLink="/faq">Help</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" routerLink="/contact">Contact Us</a>
+      </li>
+    </ul>
+    </div>
+    <div class="col-6">
+    <h6 style="color: aliceblue; margin-top:12px;">Subscribe to our newsletter</h6>
+      <div class="input-group">
+           <input type="email" class="form-control" placeholder="Enter your email">
+           <span class="input-group-btn">
+           <button class="btn" type="submit">Subscribe Now</button>
+           </span>
+     </div>
+     </div>
+     </div>
+    <p class="footer__copyright">&copy; All rights reserved.</p>
+  </footer>

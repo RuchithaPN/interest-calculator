@@ -1,0 +1,153 @@
+<div class="header">
+    <nav class="nav navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <a class="navbar-brand" routerLink="home"><b style="color:#ffffff">CALCULATOR</b></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-items">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/home" style="color:#ffffff"><b>Home</b></a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/about" style="color:#ffffff" box-sizing="border-box"><b>About
+                            Us</b></a>
+                </li>
+
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/team" style="color:#ffffff"><b>Our Team</b></a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/contact" style="color:#ffffff"><b>Contact</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">Salary Calculator</h3>
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="Age" class="form-label">Enter Age</label>
+                            <input type="number" name="Age" class="form-control" [(ngModel)]="salaryCalculator.age"
+                                min="18" max="100" id="Age">
+                        </div>
+                        <div class="mb-3">
+                            <label for=" salary" class="form-label">Enter Salary in Rupees</label>
+                            <input type="text" name="salary" class="form-control" [(ngModel)]="salaryCalculator.salary"
+                                id="salary" oninput="if(parseInt(this.value)<0){this.value='0';}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="hRA" class="form-label">Home Rental Allowance(HRA)</label>
+                            <input type="text" name="hRA" class="form-control" [(ngModel)]="salaryCalculator.hRA"
+                                id="hRA" oninput="if(parseInt(this.value)<0){this.value='0';}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lTA" class="form-label">Leave Travel Allowance(LTA)</label>
+                            <input type="number" name="lTA" class="form-control" [(ngModel)]="salaryCalculator.lTA"
+                                id="lTA" oninput="if(parseInt(this.value)<0){this.value='0';}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="sA" class="form-label">Special Allowence(SA)</label>
+                            <input type="number" name="sA" class="form-control" [(ngModel)]="salaryCalculator.sA"
+                                id="sA" oninput="if(parseInt(this.value)<0){this.value='0';}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="deduction" class="form-label">Deduction</label>
+                            <input type="number" name="deduction" class="form-control"
+                                [(ngModel)]="salaryCalculator.deduction" max="150000" id="deduction">
+                        </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <div class="card1">
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    <td class="td">Gross Salary:Rs</td>
+                                    <td>{{ salaryCalculator.grossSalary}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Net Salary:Rs</td>
+                                    <td>{{ salaryCalculator.netSalary}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Tax Amount:Rs</td>
+                                    <td>{{ salaryCalculator.taxAmount}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Tax:Rs</td>
+                                    <td>{{ salaryCalculator.tax}}%</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Tax Payable:Rs</td>
+                                    <td>{{ salaryCalculator.taxPayable}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Tax Liability:Rs</td>
+                                    <td>{{ salaryCalculator.taxLiability}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Cess:Rs</td>
+                                    <td>{{ salaryCalculator.cess}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Sur Charge:Rs</td>
+                                    <td>{{ salaryCalculator.surCharge}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div><br>
+
+
+                    <button type="button" (click)="onSubmit()" class="btn btn-success">Calculate</button>&nbsp;&nbsp;
+                    <a routerLink="/home" class="btn btn-secondary">Back</a>&nbsp;&nbsp;
+                    <button type="button" (click)="getHistory()" class="btn btn-primary" routerLink="/salary-history">History</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="row justify-content-end">
+        <div class="col-6">
+            <ul class="footer__nav">
+                <li class="footer__item">
+                    <a class="footer__link" routerLink="/home">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" routerLink="/about">About</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="#">Privacy Policy</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" routerLink="/faq">Help</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" routerLink="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <h6 style="color: aliceblue; margin-top:12px;">Subscribe to our newsletter</h6>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <span class="input-group-btn">
+                    <button class="btn1" type="submit">Subscribe Now</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <p class="footer__copyright">&copy; All rights reserved.</p>
+</footer>

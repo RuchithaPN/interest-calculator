@@ -1,0 +1,147 @@
+<div class="header">
+  <nav class="nav navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+    <a class="navbar-brand" routerLink="home"><b style="color:#ffffff">CALCULATOR</b></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-items">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/home" style="color:#ffffff"><b>Home</b></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/about" style="color:#ffffff" box-sizing="border-box"><b>About Us</b></a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/team" style="color:#ffffff"><b>Our Team</b></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/contact" style="color:#ffffff"><b>Contact</b></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
+<div class="heading">
+  <h2> INTEREST CALCULATOR</h2>
+  <section class="details-card">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-content">
+            <div class="card-img">
+            </div>
+            <div class="card-desc">
+              <h3>SIMPLE INTEREST CALCULATOR</h3>
+              <p>SIMPLE INTEREST CALCULATOR</p>
+              <button (click)="showPopup('form1')" class="btn-card">Check</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-content">
+            <div class="card-img">
+            </div>
+            <div class="card-desc">
+              <h3>PERSONAL LOAN CALCULATOR</h3>
+              <p>PERSONAL LOAN CALCULATOR</p>
+              <button (click)="showPopup('form2')" class="btn-card">Check</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-content">
+            <div class="card-img">
+            </div>
+            <div class="card-desc">
+              <h3>HOME LOAN <br> CALCULATOR</h3>
+              <p>HOME LOAN CALCULATOR</p>
+              <button (click)="showPopup('form3')" class="btn-card">Check</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="details-card">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-content1">
+            <div class="card-img">
+            </div>
+            <div class="card-desc">
+              <h3> GOLD LOAN <br> CALCULATOR</h3>
+              <p>GOLD LOAN CALCULATOR</p>
+              <button (click)="showPopup('form4')" class="btn-card">Check</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-content1">
+            <div class="card-img">
+            </div>
+            <div class="card-desc">
+              <h3>AGRICULTURE LOAN CALCULATOR</h3>
+              <p>AGRICULTURE LOAN CALCULATOR</p>
+              <button (click)="showPopup('form5')" class="btn-card">Check</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- details card section starts from here -->
+
+
+<footer class="footer">
+  <div class="row justify-content-end">
+    <div class="col-6">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" routerLink="/home">Home</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" routerLink="/about">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" routerLink="/faq">Help</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" routerLink="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h6 style="color: aliceblue; margin-top:12px;">Subscribe to our newsletter</h6>
+      <div class="input-group">
+        <input type="email" class="form-control" placeholder="Enter your email">
+        <span class="input-group-btn">
+          <button class="btn" type="submit">Subscribe Now</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <p class="footer__copyright">&copy; All rights reserved.</p>
+</footer>
+
+
+<app-interest-calculation *ngIf="showingPopup === 'form1'"
+(closed)="showingPopup = null"></app-interest-calculation>
+
+<app-personalloan-calculation *ngIf="showingPopup === 'form2'"
+(closed)="showingPopup = null"></app-personalloan-calculation>
+
+<app-homeloan-calculation *ngIf="showingPopup === 'form3'"
+(closed)="showingPopup = null"></app-homeloan-calculation>
+
+<app-goldloan-calculation *ngIf="showingPopup === 'form4'"
+(closed)="showingPopup = null"></app-goldloan-calculation>
+
+<app-agriloan-calculation *ngIf="showingPopup === 'form5'"
+(closed)="showingPopup = null"></app-agriloan-calculation>
