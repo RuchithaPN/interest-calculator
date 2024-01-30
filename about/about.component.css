@@ -1,0 +1,214 @@
+nav {
+    position: absolute;
+    min-height: 2%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: black !important;
+    font-family: 'Poppins','sans-serif';
+  }
+  
+  .navbar-brand{
+    margin-left: 70px;
+    font-size: 30px;
+  }
+  .nav-items {
+    right:100px;
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+    font-size: 17px;
+  }
+  
+  .user {
+    border-bottom: none;
+  }
+  
+  .nav-item:hover {
+    background: orange;
+  }
+  
+  .nav-link {
+    padding: 1em !important;
+  }
+  
+  a {
+    cursor: pointer;
+    color:#ffffff;
+  }
+  
+  /* HEADER */
+  
+  .header {
+    padding: 0 50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(241, 241, 241);
+  }
+
+
+  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.about-section{
+    background: url(https://websta.me/wp-content/uploads/2020/10/online-calculators-1536x1024.jpeg) no-repeat;
+    background-size: 80%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 100px;
+}
+
+.inner-container h1{
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 15px;
+    height: 30px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+  
+
+.footer {
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color:black;
+    width: 100%;
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+  }
+  
+  .footer__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .footer__item {
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  
+  .footer__link {
+    font-size: 16px;
+    color: #eee;
+    text-decoration: none;
+  }
+  
+  .footer__logo {
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+  
+  .footer__copyright {
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .footer__copyright .footer__link {
+    font-size: 1.4rem;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .brand-logo {
+    height: 80px;
+    width: auto;
+    text-align: center;
+  }
+  
+
+  
+.form-control {
+    height: 30px;
+    border-color: #ffffff;
+    border-radius:0;
+    }
+  
+  
+  .form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+    height: 20px;
+    }
+  
+    .input-group{
+      width: 400px;
+    }
+  
+  .btn1 {
+    border-radius:0;
+    background: #243c4f;
+    color: #fff;
+    font-weight:600;
+    }

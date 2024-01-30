@@ -1,0 +1,30 @@
+<div class="popup">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="text-center">Agriculture Loan Calculation</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="calculateInterest()">
+        <div class="form-group">
+          <label for="principal">Principal</label>
+          <input type="number" class="form-control" id="principal" name="principal" [(ngModel)]="calculation.principal"
+            required oninput="if(parseInt(this.value)>10000000 || parseInt(this.value)<1){this.value='0';}">
+        </div>
+        <div class="form-group">
+          <label for="time">Time (in years)</label>
+          <input type="number" class="form-control" id="time" name="time" [(ngModel)]="calculation.time" required
+            min="1" max="6" oninput="if(parseInt(this.value)>20 || parseInt(this.value)<0){this.value='0';}">
+        </div>
+        <button type="submit" class="btn btn-success">Calculate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="close" (click)="closePopup(clickedButtonId)"
+          class="btn btn-secondary">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" routerLink="/agri-interest-history">History</button>
+      </form>
+      <hr>
+      <div *ngIf="result">
+        <h5>Interest: Rs {{ result.interest }}</h5>
+        <h5>Total Amount:Rs  {{ result.total }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
